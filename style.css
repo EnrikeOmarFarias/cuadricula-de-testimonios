@@ -12,6 +12,12 @@
 
   --Lightgray: hsl(0, 0%, 81%);
   --Lightgrayishblue: hsl(210, 46%, 95%);
+
+  --fuente: "Barlow Semi Condensed", sans-serif;
+
+  --lg: 2.4rem;
+  --md: 1.6rem;
+  --sm: 1rem;
 }
 
 html {
@@ -20,17 +26,17 @@ html {
 
 body {
   font-size: 1.3rem;
-  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: var(--fuente);
   background-color: var(--Lightgray);
 }
 
 .conteiner {
   display: grid;
-  grid-template-columns: 30rem 12rem 24rem 24rem;
+  grid-template-columns: 20% 30% 20% 20%;
   grid-template-rows: 30rem 30rem;
 
   place-content: center;
-  gap: 1rem;
+  gap: 2rem;
   margin: 4rem;
 }
 
@@ -38,12 +44,27 @@ body {
   border: 0.2rem solid transparent;
   border-radius: 0.4rem;
   overflow: hidden;
-  padding: 1rem;
+  padding: 2rem;
 }
 
-.daniel {
-  grid-column: 1 / 3;
-  background-color: var(--Moderateviolet);
+.presentacion {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.parrafo1 {
+  color: var(--White);
+  font-weight: bold;
+  font-size: var(--lg);
+  margin-bottom: 2rem;
+}
+
+.parrafo2 {
+  font-size: var(--md);
+  font-weight: 500;
+  color: var(--Lightgray);
+  opacity: 0.7;
 }
 
 .img {
@@ -52,22 +73,59 @@ body {
   border-radius: 50%;
 }
 
-.jonathan {
-  background-color: var(--Verydarkgrayishblue);
+.subtitulo {
+  font-size: var(--md);
+  color: var(--Lightgray);
+  opacity: 0.5;
 }
 
-.patrick {
+.cards-daniel {
+  grid-column: 1 / 3;
+  background-color: var(--Moderateviolet);
+}
+
+.nombre-daniel {
+  color: var(--Lightgrayishblue);
+  font-size: var(--md);
+  font-weight: 400;
+}
+
+.cards-jonathan {
+  background-color: var(--Verydarkgrayishblue);
+  color: var(--White);
+}
+
+.cards-patrick {
   grid-column: 2 / 4;
   background-color: var(--Verydarkblackishblue);
 }
 
-.jeanette {
-  grid-column: 1/ 2;
+.cards-jeanette {
   background-color: var(--Lightgrayishblue);
 }
 
-.kira {
+.parrafo1-janette,
+.parrafo1-kira {
+  font-weight: bold;
+  font-size: var(--lg);
+  color: var(--Verydarkblackishblue);
+  opacity: 0.7;
+}
+
+.parrafo2-jeanette,
+.parrafo2-kira {
+  font-size: var(--md);
+  font-weight: 500;
+  color: var(--Verydarkgrayishblue);
+  opacity: 0.7;
+}
+
+.cards-kira {
   grid-row: 1 / 3;
   grid-column: 4 /5;
   background-color: var(--White);
+}
+
+.nombre-kira {
+  color: var(--Verydarkgrayishblue);
 }
