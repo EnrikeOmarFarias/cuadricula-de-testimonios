@@ -32,12 +32,11 @@ body {
 
 .conteiner {
   display: grid;
-  grid-template-columns: 20% 30% 20% 20%;
-  grid-template-rows: 30rem 30rem;
-
-  place-content: center;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-auto-rows: 2, auto;
+  margin: 4rem 6rem;
   gap: 2rem;
-  margin: 4rem;
+  max-width: 120rem;
 }
 
 .cards {
@@ -55,7 +54,7 @@ body {
 
 .parrafo1 {
   color: var(--White);
-  font-weight: bold;
+  font-weight: bolder;
   font-size: var(--lg);
   margin-bottom: 2rem;
 }
@@ -128,4 +127,21 @@ body {
 
 .nombre-kira {
   color: var(--Verydarkgrayishblue);
+}
+
+@media (max-width: 800px) {
+  .conteiner {
+    display: flex;
+    flex-direction: column;
+    width: 60rem;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .conteiner {
+    max-width: 320px;
+    margin: 4rem 1rem;
+  }
 }
